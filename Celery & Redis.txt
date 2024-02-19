@@ -1,0 +1,13 @@
+* To start redis server : run the following command in ubuntu "redis-server"
+
+* Make sure redis and celery is pre installed. pip install redis, pip install celery
+
+* command to run the celery app :- celery -A main:cel_app worker -l INFO
+
+* command to run the celery app in windows :- celery -A main:cel_app worker -l INFO --pool=solo
+
+# client pushes the message in message broker ---> celery distributes the task to the workers ---> Once the task is complete the result will be pushed to the result backend
+
+* command to run the celery beat :- celery -A main:cel_app beat -l INFO
+
+* command to start MailHog : ~/go/bin/MailHog
